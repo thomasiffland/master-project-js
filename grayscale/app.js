@@ -63,7 +63,7 @@ function createGrayscaleImageWithResize(req,path,res,size) {
             size: size,
             file: fs.createReadStream(newFileName),
         };
-        request.post({url:'http://localhost:8083/resize', formData: formData,encoding: 'binary'}, function optionalCallback(err, httpResponse, body) {
+        request.post({url:'http://resize:8083/resize', formData: formData,encoding: 'binary'}, function optionalCallback(err, httpResponse, body) {
             if (err) {
                 return console.error('upload failed:', err);
             }

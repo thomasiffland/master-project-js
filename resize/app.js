@@ -59,7 +59,7 @@ function resizePercent(req, res, mypath, percent) {
         file: fs.createReadStream(mypath),
     };
     request.post({
-        url: 'http://localhost:8082/exifdata/filtered',
+        url: 'http://exifdata:8082/exifdata/filtered',
         formData: formData,
         encoding: 'binary'
     }, function optionalCallback(err, httpResponse, body) {

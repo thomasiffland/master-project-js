@@ -63,7 +63,7 @@ function rawToJpgWithGrayscale(req, path, res) {
         const formData = {
             file: fs.createReadStream(newFileName),
         };
-        request.post({url:'http://localhost:8081/grayscale', formData: formData,encoding: 'binary'}, function optionalCallback(err, httpResponse, body) {
+        request.post({url:'http://grayscale:8081/grayscale', formData: formData,encoding: 'binary'}, function optionalCallback(err, httpResponse, body) {
             if (err) {
                 return console.error('upload failed:', err);
             }
